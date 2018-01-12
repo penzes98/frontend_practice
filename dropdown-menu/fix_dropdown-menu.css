@@ -22,6 +22,7 @@ main {
     width: 960px;
 /*    ha csak kettő értéket kap a margin vagy a padding, akkor*/
 /*    az első érték alul-fölül, a második jobbra-balra*/
+/*    a margin: 0 auto, fix, és adott szélesség esetén középre igazitja au adott elemet*/
     margin: 0 auto;
 }
 
@@ -35,20 +36,15 @@ footer {
 
 h1 {
     font-size: 40px;
+/*    szöveg középre igazitása: */
+    text-align: center;
 }
 .main-menu-container {
-background: rgba(183,222,237,1);
-background: -moz-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 60%, rgba(33,180,226,1) 99%, rgba(33,180,226,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(183,222,237,1)), color-stop(60%, rgba(113,206,239,1)), color-stop(99%, rgba(33,180,226,1)), color-stop(100%, rgba(33,180,226,1)));
-background: -webkit-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 60%, rgba(33,180,226,1) 99%, rgba(33,180,226,1) 100%);
-background: -o-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 60%, rgba(33,180,226,1) 99%, rgba(33,180,226,1) 100%);
-background: -ms-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 60%, rgba(33,180,226,1) 99%, rgba(33,180,226,1) 100%);
-background: linear-gradient(to right, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 60%, rgba(33,180,226,1) 99%, rgba(33,180,226,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#21b4e2', GradientType=1 );
 
 
-   /* background-color: lightblue;*/
+    background-color: lightblue;
 /*    ez is kell ahhoz hogy a main-menu középen legyen*/
+/*    inline elemek esetében, a text-align: center igazít középre*/
     text-align: center;
     margin-bottom: 40px;
 }
@@ -56,12 +52,65 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', end
 .main-menu {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    
 }
 
 .main-menu-item {
+/*    itt állitjuk át a lista item típusát blokk szintűről inline-ra*/
     display: inline-block;
-    padding: 20px 10px; 
+    font-size: 17px;
+    padding: 20px 10px;
     background-color: blue;
-    color: white
+    color: white;
+/*    azért hogy a submenu-t a főmenühöz képest tudjuk igazitani, az összes főmenü: position: relative */
+    position: relative;
+/* animáció hozzáadása: */
+    transition: background-color .5s  ease-in-out;
 }
+
+.main-menu-item:hover, .submenu-item:hover 
+{
+    background-color: red;
+} 
+.main-menu-item:hover > .submenu 
+{
+/*    a submenu akkor jelenik meg ha a main-menu-item-re hoverezünk */
+    visibility: visible;
+    opacity: 1;
+}
+
+.submenu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+/*    a submenu pozicióját ducoment flow-tól függetlenül állitjuk, ezért kell a position: absolute*/
+    position: absolute;
+    top: 60px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s  ease-in-out;
+    
+   
+}
+
+.submenu-item 
+{
+    padding: 20px 10px;
+    background-color: blue;
+    transition: background-color .5s  ease-in-out;
+}
+
+.gombos-menu {
+    display: none;
+}
+.menu-checkbox-input {
+    display: none;
+}
+/*adjacent sibling selector*/
+/*az input után, vele egy szinten, valahol utána, egy elem aminek a class-a .gombos-menu*/
+.menu-checkbox-input:checked ~ .gombos-menu {
+    display: block;
+}
+
