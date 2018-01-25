@@ -1,0 +1,86 @@
+/*csslint fallback-colors: false, order-alphabetical: false, box-model: false*/
+
+body {
+    background: rgb(72, 83, 112);
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#e9e4ff;
+}
+
+.main-menu-container {
+  text-align: center;
+  padding-top: 50px;
+  border-bottom: 3px solid #68d2c3;
+  
+}
+.main-menu-item {
+    display: inline-block;
+    font-size: 17px;
+    padding: 20px 0 20px 0;
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+}
+.main-menu-item:hover{
+    cursor: pointer;
+    background-color: rgba(41,47,48,.2);
+}
+
+.main-menu-item:hover, .submenu-item:hover 
+{
+    background-color: rgba(41,47,48,.7);
+} 
+
+.main-menu-item:hover > .submenu 
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.submenu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s  ease-in-out;
+    
+   
+}
+.submenu-item 
+{
+    padding: 18px 10px;
+    background-color: rgba(41,47,47,.2);
+    width: 130%;
+    transition: background-color .5s  ease-in-out;
+}
+
+
+.company-image{
+    float: right;
+}
+a{
+    color:#e9e4ff;
+    text-decoration: none;
+}
+
+  
+
+
+
+main {
+  width: 600px;
+  line-height: 1.6;
+}
+header{
+    width: 400px;
+
+}
+.main-content{
+    margin: auto;
+    width: 800px;
+}
