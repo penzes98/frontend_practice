@@ -1,0 +1,191 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(242, 237, 228);
+}
+
+header, main {
+    width: 900px;
+    margin: 40px auto 0 auto;
+}
+
+
+.logo{
+    display: inline-block;
+    width: 320px;
+}
+
+.logo > h1 {
+    font-size: 40px;    
+    border-bottom: 1px solid black;
+}
+.logo > h2 {
+    font-size: 15px;
+    letter-spacing: 8px;
+    position: absolute;
+    top:12%;
+    font-family:sans-serif;
+    color: darkgray;
+    font-style: italic;
+    
+}
+
+/* jobbra igazitva */
+.menu-container{
+    float: right;
+    
+}
+
+.menu {
+    list-style: none;
+}
+.menu-item {
+    display: inline-block;
+    margin: 45px 10px;
+}
+.menu-item:nth-child(1) {
+    border-bottom: 4px solid red;
+}
+
+.menu-item:nth-child(2) {
+    border-bottom: 4px solid lightblue;
+}
+
+.menu-item:nth-child(3) {
+    border-bottom: 4px solid plum;
+}
+
+.menu-item:nth-child(4) {
+    border-bottom: 4px solid green
+}
+
+.menu-item:nth-child(5) {
+    border-bottom: 4px solid yellow;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item:hover {
+    border-bottom: 4px solid black;
+}
+
+.main-article {
+    margin-top: 40px;
+}
+
+.main-article-content > h1 {
+    font-size: 35px;
+    padding: 15px 15px 5px 15px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    position: absolute;
+    top:9px;
+    
+}
+
+.main-article-content > h2 {
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    line-height: 1.5;
+    position: relative;
+    top:85px;
+    padding:13px 90px 13px 13px;
+    font-size: 17px;
+    
+}
+.main-article-content p {
+    width: 700px;
+}
+
+.crop {
+    height: 500px;
+    overflow: hidden;
+}
+
+.main-article-image {
+    width: 100%;
+}
+
+/* positioning!!!!! */
+.main-article {
+    position: relative;
+}
+
+.main-article-content {
+    position: absolute;
+    top: 310px;
+    left:20px;
+}
+
+.tag a{
+    color: white;
+    padding: 5px;
+}
+
+.tag-politics a {
+    background-color: red;
+}
+
+.tag-sports a {
+    background-color: green;
+}
+
+.tag-politics {
+    position: absolute;
+    top:8px;
+}
+.continue-to-article{
+    background-color: blue;
+    color: white;
+    margin-top: 40px;
+    margin-right: 2px;
+    float: right;
+    position: relative;
+    padding: 5px;
+    font-style: italic;
+}
+.continue-to-article a {
+    color: white;
+    text-decoration: none;
+}
+
+.article-half-width {
+    margin-top: 20px;
+    padding: 7px;
+}
+
+.half-width-crop{
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-half-width .tag{
+    margin-top: -25px;
+}
+.article-half-width h1, .article-half-width h2 {
+    padding: 0;
+    margin: 0;
+}
+.article-half-width h2 {
+    font-size: 15px;
+    margin-top: 10px;
+}
+.article-half-width {
+    width: 45%;
+    background-color: #e2e2e2;
+}
+
+/* jobra */
+.article-right {
+    position: relative;
+    top: -685px;
+    left:475px;
+    
+}
+/* balra */
+.article-left {
+position: relative;
+left: 5px;
+}
