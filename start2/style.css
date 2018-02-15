@@ -22,7 +22,7 @@ header, main {
     font-size: 15px;
     letter-spacing: 8px;
     position: absolute;
-    top:12%;
+    top:8vw;
     font-family:sans-serif;
     color: darkgray;
     font-style: italic;
@@ -126,6 +126,7 @@ header, main {
 
 .tag-politics a {
     background-color: red;
+    text-decoration: none;
 }
 
 .tag-sports a {
